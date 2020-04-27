@@ -91,9 +91,9 @@
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>-669</y>
+             <y>-680</y>
              <width>926</width>
-             <height>1250</height>
+             <height>1255</height>
             </rect>
            </property>
            <property name="minimumSize">
@@ -224,7 +224,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                     <widget class="QLineEdit" name="ledt_ini_PM">
                      <property name="font">
                       <font>
-                       <pointsize>10</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>50</weight>
                        <bold>false</bold>
                       </font>
@@ -305,7 +305,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                     <widget class="QLineEdit" name="ledt_ini_PL">
                      <property name="font">
                       <font>
-                       <pointsize>10</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>50</weight>
                        <bold>false</bold>
                       </font>
@@ -369,7 +369,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                     <widget class="QLineEdit" name="ledt_ini_PG">
                      <property name="font">
                       <font>
-                       <pointsize>10</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>50</weight>
                        <bold>false</bold>
                       </font>
@@ -469,7 +469,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                     <widget class="QLineEdit" name="ledt_ini_PE">
                      <property name="font">
                       <font>
-                       <pointsize>10</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>50</weight>
                        <bold>false</bold>
                       </font>
@@ -504,7 +504,7 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                     <widget class="QLineEdit" name="ledt_ini_PA">
                      <property name="font">
                       <font>
-                       <pointsize>10</pointsize>
+                       <pointsize>12</pointsize>
                        <weight>50</weight>
                        <bold>false</bold>
                       </font>
@@ -1086,6 +1086,11 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                    </font>
+                   </property>
                   </widget>
                  </item>
                  <item row="4" column="0">
@@ -1486,7 +1491,30 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                   </widget>
                  </item>
                  <item row="10" column="3">
-                  <widget class="QLineEdit" name="ledt_qua_RMRI"/>
+                  <widget class="QLineEdit" name="ledt_qua_RMRI">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>400</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                  </widget>
                  </item>
                  <item row="1" column="3">
                   <widget class="QDoubleSpinBox" name="sbox_qua_RPHWAP">
@@ -1548,22 +1576,17 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                   </widget>
                  </item>
                  <item row="15" column="3">
-                  <widget class="QLineEdit" name="ledt_qua_DLLI"/>
+                  <widget class="QLineEdit" name="ledt_qua_DLLI">
+                   <property name="font">
+                    <font>
+                     <pointsize>12</pointsize>
+                     <weight>50</weight>
+                     <bold>false</bold>
+                    </font>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
-               </item>
-               <item row="3" column="1">
-                <spacer name="horizontalSpacer_4">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
                </item>
               </layout>
              </widget>

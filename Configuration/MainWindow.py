@@ -37,6 +37,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setTips(self.tbl_Q)
 
         self.addItemsToTypeList()
+        self.initUI()
+
+    def initUI(self):
+        cconfig = CConfigOne()
+        cconfig_file = CConfigFileOne()
+        cconfig_ui = CConfigUiOne()
+        path = 'D:\Personal\GUI_2\Configuration\default.txt'
+
+        cconfig = cconfig_file.file2config(path, cconfig)
+        cconfig_ui.config2ui(self, cconfig)
 
     def addItemsToTypeList(self):
         self.cbox_dat_TM1.addItems(['0', '1', '2'])
