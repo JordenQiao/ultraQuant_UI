@@ -66,7 +66,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def checkSBox(self, table, row, value):
         table.setItem(row, 1, QTableWidgetItem(value))
         table.item(row, 1).setBackground(self.color_normal if Decimal(value) > 0 else self.color_warning)
-        return 1 if Decimal(value) > 0 else 0
+        return 0 if Decimal(value) > 0 else 1
 
     def checkPathsExist(self, table, row, list):
         item_num = list.count()
@@ -79,13 +79,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if item_num == 0:
             flag = False
         table.item(row, 1).setBackground(self.color_normal if flag else self.color_warning)
-        return 1 if flag else 0
+        return 0 if flag else 1
 
     def checkPathExist(self, table, row, value):
         table.setItem(row, 1, QTableWidgetItem(value))
         flag = os.path.exists(value)
         table.item(row, 1).setBackground(self.color_normal if flag else self.color_warning)
-        return 1 if flag else 0
+        return 0 if flag else 1
 
     def check_pannels(self):
         num_error = 0
@@ -146,7 +146,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     @pyqtSlot()
     def on_btn_run_clicked(self):
-        os.system("notepad")
+        os.system(os.path.dirname(os.path.abspath(__file__)) + '\\UltraQuant\\UltraQuant.exe')
 
     @pyqtSlot()
     def on_btn_save_clicked(self):
@@ -273,7 +273,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if len(file_names) == 0:
             return
         for file_name in file_names:
-            self.list_dat_PM1.addItem(file_name)
+            flag = True
+            for i in range(self.list_dat_PM1.count()):
+                if (self.list_dat_PM1.item(i).text() == file_name):
+                    QMessageBox.information(self, 'warning', '该文件路径已存在', QMessageBox.Yes)
+                    flag = False
+                    break
+            if flag:
+                self.list_dat_PM1.addItem(file_name)
 
     @pyqtSlot()
     def on_btn_dat_PM1_delete_clicked(self):
@@ -295,7 +302,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if len(file_names) == 0:
             return
         for file_name in file_names:
-            self.list_dat_PM2.addItem(file_name)
+            flag = True
+            for i in range(self.list_dat_PM2.count()):
+                if (self.list_dat_PM2.item(i).text() == file_name):
+                    QMessageBox.information(self, 'warning', '该文件路径已存在', QMessageBox.Yes)
+                    flag = False
+                    break
+            if flag:
+                self.list_dat_PM2.addItem(file_name)
 
     @pyqtSlot()
     def on_btn_dat_PM2_delete_clicked(self):
@@ -318,7 +332,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return
         else:
             for file_name in file_names:
-                self.list_idr_PIR.addItem(file_name)
+                flag = True
+                for i in range(self.list_idr_PIR.count()):
+                    if (self.list_idr_PIR.item(i).text() == file_name):
+                        QMessageBox.information(self, 'warning', '该文件路径已存在', QMessageBox.Yes)
+                        flag = False
+                        break
+                if flag:
+                    self.list_idr_PIR.addItem(file_name)
 
     @pyqtSlot()
     def on_btn_idr_PIR_delete_clicked(self):
