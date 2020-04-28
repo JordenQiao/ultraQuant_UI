@@ -34,6 +34,12 @@ class CConfigUiOne:
         ui.ledt_qua_DLLI.setText(config.DDALL_LABEL_INFO)
         ui.cbox_qua_DFC.setCurrentIndex(config.DDALL_FLAG_CALIBRATION_18O_LIST.index(config.DDALL_FLAG_CALIBRATION_18O))
 
+        # [Export]
+        ui.ledt_exp_PE.setText(config.PATH_EXPORT)
+        ui.cbox_exp_TE.setCurrentIndex(config.TYPE_EXPORT_LIST.index(config.TYPE_EXPORT))
+        ui.cbox_exp_FCNF.setCurrentIndex(config.FLAG_CREATE_NEW_FOLDER_LIST.index(config.FLAG_CREATE_NEW_FOLDER))
+        ui.cbox_exp_FEE.setCurrentIndex(config.FLAG_EXPORT_EVIDENCE_LIST.index(config.FLAG_EXPORT_EVIDENCE))
+
         return ui
 
     def ui2config(self, ui, config):
@@ -76,6 +82,12 @@ class CConfigUiOne:
         config.DDALL_PPM_HALF_WIN_ACCURACY_PEAK = ui.sbox_qua_DLPHWAP.text()
         config.DDALL_LABEL_INFO = ui.ledt_qua_DLLI.text()
         config.DDALL_FLAG_CALIBRATION_18O = ui.cbox_qua_DFC.currentText()
+
+        # [Export]
+        config.PATH_EXPORT = ui.ledt_exp_PE.text()
+        config.TYPE_EXPORT = ui.cbox_exp_TE.currentText()
+        config.FLAG_CREATE_NEW_FOLDER = ui.cbox_exp_FCNF.currentText()
+        config.FLAG_EXPORT_EVIDENCE = ui.cbox_exp_FEE.currentText()
 
 
         return config

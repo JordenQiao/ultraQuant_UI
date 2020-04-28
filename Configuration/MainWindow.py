@@ -56,6 +56,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.cbox_qua_TQ.addItems(['0', '1', '2'])
         self.cbox_qua_DFC.addItems(['0', '1', '2'])
         self.cbox_idr_TIR.addItems(['0', '1', '2'])
+        self.cbox_exp_FCNF.addItems(['0', '1', '2'])
+        self.cbox_exp_FEE.addItems(['0', '1', '2'])
+        self.cbox_exp_TE.addItems(['0', '1', '2'])
 
     def setTips(self, table):
         table.setMouseTracking(True)
@@ -122,17 +125,26 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         num_error += self.checkSBox(self.tbl_Q, 1, item_sbox_qua_RPHWAP)
         self.tbl_Q.setItem(2, 1, QTableWidgetItem(self.ledt_qua_RMRI.text()))
         self.tbl_Q.item(2, 1).setBackground(self.color_normal if self.ledt_qua_RMRI.text() != '' else self.color_warning)
+        num_error += 1 if self.ledt_qua_RMRI.text() == '' else 0
         item_sbox_qua_DLRHWIM = self.sbox_qua_DLRHWIM.text()
         num_error += self.checkSBox(self.tbl_Q, 3, item_sbox_qua_DLRHWIM)
         item_sbox_qua_DLPHWAP = self.sbox_qua_DLPHWAP.text()
         num_error += self.checkSBox(self.tbl_Q, 4, item_sbox_qua_DLPHWAP)
         self.tbl_Q.setItem(5, 1, QTableWidgetItem(self.ledt_qua_DLLI.text()))
         self.tbl_Q.item(5, 1).setBackground(self.color_normal if self.ledt_qua_DLLI.text() != '' else self.color_warning)
+        num_error += 1 if self.ledt_qua_DLLI.text() == '' else 0
         self.tbl_Q.setItem(6, 1, QTableWidgetItem(self.cbox_qua_DFC.currentText()))
         item_sbox_qua_DFRHWIM = self.sbox_qua_DFRHWIM.text()
         num_error += self.checkSBox(self.tbl_Q, 7, item_sbox_qua_DFRHWIM)
         item_sbox_qua_DFPHWAP = self.sbox_qua_DFPHWAP.text()
         num_error += self.checkSBox(self.tbl_Q, 8, item_sbox_qua_DFPHWAP)
+
+        #Export
+        item_ledt_exp_PE = self.ledt_exp_PE.text()
+        num_error += self.checkPathExist(self.tbl_E, 0, item_ledt_exp_PE)
+        self.tbl_E.setItem(1, 1, QTableWidgetItem(self.cbox_exp_TE.currentText()))
+        self.tbl_E.setItem(2, 1, QTableWidgetItem(self.cbox_exp_FCNF.currentText()))
+        self.tbl_E.setItem(3, 1, QTableWidgetItem(self.cbox_exp_FEE.currentText()))
 
         return num_error
 
@@ -166,8 +178,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, '消息', '保存成功', QMessageBox.Yes)
 
     @pyqtSlot()
-    def on_btn_save_as_clicked(self):
+    def on_btn_exp_PE_clicked(self):
+        path= QFileDialog.getExistingDirectory(self, 'PATH_AA File Select', "/")
+        if not os.path.exists(path):
+            return
+        self.ledt_exp_PE.setText('{}'.format(path))
 
+    @pyqtSlot()
+    def on_btn_save_as_clicked(self):
         if len(self.config_list) == 0:
             QMessageBox.warning(self, '消息', '无可供导出的配置文件，请先尝试导入', QMessageBox.Yes)
             return

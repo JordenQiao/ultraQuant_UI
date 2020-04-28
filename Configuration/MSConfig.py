@@ -37,5 +37,7 @@ class CConfigOne(object):
     PATH_EXPORT = 'D:\\test\\'
     TYPE_EXPORT_LIST = ['0', '1', '2']
     TYPE_EXPORT = '1'
+    FLAG_CREATE_NEW_FOLDER_LIST = ['0', '1', '2']
     FLAG_CREATE_NEW_FOLDER = '0'
+    FLAG_EXPORT_EVIDENCE_LIST = ['0', '1', '2']
     FLAG_EXPORT_EVIDENCE = '0'

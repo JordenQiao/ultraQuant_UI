@@ -39,6 +39,13 @@ class CConfigFileOne():
         c.set('Quantitation', 'DDALL_LABEL_INFO', str(config.DDALL_LABEL_INFO))
         c.set('Quantitation', 'DDALL_FLAG_CALIBRATION_18O', str(config.DDALL_FLAG_CALIBRATION_18O))
 
+        # [Export]
+        c.add_section('Export')
+        c.set('Export', 'PATH_EXPORT', str(config.PATH_EXPORT))
+        c.set('Export', 'TYPE_EXPORT', str(config.TYPE_EXPORT))
+        c.set('Export', 'FLAG_CREATE_NEW_FOLDER', str(config.FLAG_CREATE_NEW_FOLDER))
+        c.set('Export', 'FLAG_EXPORT_EVIDENCE', str(config.FLAG_EXPORT_EVIDENCE))
+
         with open(path, 'w', encoding='utf-8') as f:
             c.write(f)
 
@@ -81,6 +88,12 @@ class CConfigFileOne():
         config.DDALL_PPM_HALF_WIN_ACCURACY_PEAK = c.get('Quantitation', 'DDALL_PPM_HALF_WIN_ACCURACY_PEAK')
         config.DDALL_LABEL_INFO = c.get('Quantitation', 'DDALL_LABEL_INFO')
         config.DDALL_FLAG_CALIBRATION_18O = c.get('Quantitation', 'DDALL_FLAG_CALIBRATION_18O')
+
+        # [Export]
+        config.PATH_EXPORT = c.get('Export', 'PATH_EXPORT')
+        config.TYPE_EXPORT = c.get('Export', 'TYPE_EXPORT')
+        config.FLAG_CREATE_NEW_FOLDER = c.get('Export', 'FLAG_CREATE_NEW_FOLDER')
+        config.FLAG_EXPORT_EVIDENCE = c.get('Export', 'FLAG_EXPORT_EVIDENCE')
 
         return config
 
