@@ -1,37 +1,29 @@
 [Ini files]
-INI_PATH_ELEMENT=element.ini
-INI_PATH_AA=aa.ini
-INI_PATH_MOD=modification.ini
-INI_PATH_GLYCO=glyco.ini
-INI_PATH_LINKER=xlink.ini
+INI_PATH_ELEMENT = element.ini
+INI_PATH_AA = bb.ini
+INI_PATH_MOD = modification.ini
+INI_PATH_GLYCO = glyco.ini
+INI_PATH_LINKER = xlink.ini
 
 [Data]
-PATH_MS1=  #填写文件名，多个文件用|分割，如1.ms1|2.ms1|3.ms1，界面就是显示载入多个文件的那种形式
-TYPE_MS1=0  #这个就是一个数字而已，界面是要能给多个选项进行挑选，挑选文件类型用的
-PATH_MS2= #填写文件名，多个文件用|分割，如1.ms2|2.ms2|3.ms2，界面就是显示载入多个文件的那种形式
-TYPE_MS2=0 #这个就是一个数字而已，界面是要能有多个选项进行挑选，挑选文件类型用的
+PATH_MS1 = 
+TYPE_MS1 = 0
+PATH_MS2 = 
+TYPE_MS2 = 0
 
 [Identification results]
-PATH_IDENTIFICATION_RESULT= #填文件名，多个文件用|分割，如1.spectra|2.spectra|3.spectra， 界面就是显示载入多个文件的那种形式
-TYPE_IDENTIFICATION_RESULT=1 #这个就是一个数字而已，界面是要能给多个选项，界面上是能选择文件类型用的
-THRESHOLD_FDR=0.01 #界面就是一个可以修改数值
+PATH_IDENTIFICATION_RESULT = 
+TYPE_IDENTIFICATION_RESULT = 1
+THRESHOLD_FDR = 0.010
 
 [Quantitation]
-TYPE_QUANT=0 #一个数字，用来挑选类型的，界面就是给多个选项
-RI_MASS_REPORT_ION=127.11, 130.11 #文本框
-RI_PPM_HALF_WIN_ACCURACY_PEAK=1000  #界面是一个可以修改的数值
-DDALF_RT_HALF_WIN_IN_MIN=2  #界面就是一个可以修改数值
-DDALF_PPM_HALF_WIN_ACCURACY_PEAK=20 #界面就是一个可以修改数值
-DDALL_RT_HALF_WIN_IN_MIN=2 #界面就是一个可以修改数值
-DDALL_PPM_HALF_WIN_ACCURACY_PEAK=20 #界面就是一个可以修改数值
-DDALL_LABEL_INFO=2|NONE|AA:R:N:15N&AA:R:C:13C&AA:K:C:13C&AA:K:N:15N|  #字符串	//不需要可修改，下拉框，做映射
-DDALL_FLAG_CALIBRATION_18O=0 # 下拉框
+TYPE_QUANT = 0
+RI_MASS_REPORT_ION = 127.11, 130.11
+RI_PPM_HALF_WIN_ACCURACY_PEAK = 1000.00
+DDALF_RT_HALF_WIN_IN_MIN = 2.00
+DDALF_PPM_HALF_WIN_ACCURACY_PEAK = 20.00
+DDALL_RT_HALF_WIN_IN_MIN = 2.00
+DDALL_PPM_HALF_WIN_ACCURACY_PEAK = 20.00
+DDALL_LABEL_INFO = 2|NONE|AA:R:N:15N&AA:R:C:13C&AA:K:C:13C&AA:K:N:15N|
+DDALL_FLAG_CALIBRATION_18O = 0
 
-[Export]
-PATH_EXPORT=D:\test\  #输出文件路径，界面做成填写路径就行
-TYPE_EXPORT=1 #一个数字，界面是要能给多个选项进行挑选
-FLAG_CREATE_NEW_FOLDER=0  #一个数字，界面是要能给多个选项进行挑选
-FLAG_EXPORT_EVIDENCE=0  #一个数字，界面是要能给多个选项进行挑选
-
-
-运行，过一下代码，提问

@@ -43,7 +43,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         cconfig = CConfigOne()
         cconfig_file = CConfigFileOne()
         cconfig_ui = CConfigUiOne()
-        path = 'D:\Personal\GUI_2\Configuration\default.txt'
+        path = os.path.dirname(os.path.abspath(__file__)) + '\default.txt'
+        print(path)
 
         cconfig = cconfig_file.file2config(path, cconfig)
         cconfig_ui.config2ui(self, cconfig)
@@ -186,30 +187,45 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def on_btn_import_clicked(self):
         global import_file
         file_name, file_type = QFileDialog.getOpenFileName(self, '配置文件选择', self.cwd, 'Text Files(*.txt)')
-        if not os.path.exists(file_name) or file_name == '':
-            return
-
-        path_configs = os.path.join(os.path.dirname(file_name), 'params')
-        if not os.path.exists(path_configs):
-            QMessageBox.warning(self, '警告', '无可供导入的配置文件，请先尝试重新导入', QMessageBox.Yes)
-            return
-        name_configs = os.listdir(path_configs)
-        self.config_list = list(filter(lambda c: c[0] in name_configs, self.config_list))
-
         for config in self.config_list:
             cconfig = config[1]()
             cconfig_file = config[2]()
             cconfig_ui = config[3]()
 
-            config_file_name = os.path.join(path_configs, config[0])
-            import_file = config_file_name
-
-            cconfig = cconfig_file.file2config(config_file_name, cconfig)
+            import_file = file_name
+            cconfig = cconfig_file.file2config(file_name, cconfig)
             cconfig_ui.config2ui(self, cconfig)
 
         QMessageBox.information(self, 'Success', 'Config File Load Success!', QMessageBox.Yes)
-
         return
+
+    # @pyqtSlot()
+    # def on_btn_import_clicked(self):
+    #     global import_file
+    #     file_name, file_type = QFileDialog.getOpenFileName(self, '配置文件选择', self.cwd, 'Text Files(*.txt)')
+    #     if not os.path.exists(file_name) or file_name == '':
+    #         return
+    #
+    #     path_configs = os.path.join(os.path.dirname(file_name), 'params')
+    #     if not os.path.exists(path_configs):
+    #         QMessageBox.warning(self, '警告', '无可供导入的配置文件，请先尝试重新导入', QMessageBox.Yes)
+    #         return
+    #     name_configs = os.listdir(path_configs)
+    #     self.config_list = list(filter(lambda c: c[0] in name_configs, self.config_list))
+    #
+    #     for config in self.config_list:
+    #         cconfig = config[1]()
+    #         cconfig_file = config[2]()
+    #         cconfig_ui = config[3]()
+    #
+    #         config_file_name = os.path.join(path_configs, config[0])
+    #         import_file = config_file_name
+    #
+    #         cconfig = cconfig_file.file2config(config_file_name, cconfig)
+    #         cconfig_ui.config2ui(self, cconfig)
+    #
+    #     QMessageBox.information(self, 'Success', 'Config File Load Success!', QMessageBox.Yes)
+    #     return
 
     @pyqtSlot()
     def on_btn_ini_PA_clicked(self):
