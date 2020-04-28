@@ -56,12 +56,18 @@ class CConfigFileOne():
 
         # [Data]
         config.PATH_MS1 = c.get('Data', 'PATH_MS1').split('|')
+        if config.PATH_MS1 == ['']:
+            config.PATH_MS1 = []
         config.TYPE_MS1 = c.get('Data', 'TYPE_MS1')
         config.PATH_MS2 = c.get('Data', 'PATH_MS2').split('|')
+        if config.PATH_MS2 == ['']:
+            config.PATH_MS2 = []
         config.TYPE_MS2 = c.get('Data', 'TYPE_MS2')
 
         # [Identification results]
         config.PATH_IDENTIFICATION_RESULT = c.get('Identification results', 'PATH_IDENTIFICATION_RESULT').split('|')
+        if config.PATH_IDENTIFICATION_RESULT == ['']:
+            config.PATH_IDENTIFICATION_RESULT = []
         config.TYPE_IDENTIFICATION_RESULT = c.get('Identification results', 'TYPE_IDENTIFICATION_RESULT')
         config.THRESHOLD_FDR = c.get('Identification results', 'THRESHOLD_FDR')
 

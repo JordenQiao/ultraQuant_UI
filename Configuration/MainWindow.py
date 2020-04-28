@@ -40,6 +40,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.initUI()
 
     def initUI(self):
+        self.btn_run.setDisabled(True)
         cconfig = CConfigOne()
         cconfig_file = CConfigFileOne()
         cconfig_ui = CConfigUiOne()
@@ -73,6 +74,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         flag = True
         for i in range(item_num):
             if not os.path.exists(list.item(i).text()):
+                print(list.item(i).text())
                 flag = False
         if item_num == 0:
             flag = False
@@ -138,6 +140,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def on_tab_box_currentChanged(self, index):
         if index == 1:
             num_error = self.check_pannels()
+            if num_error==0:
+                self.btn_run.setDisabled(False)
+
 
     @pyqtSlot()
     def on_btn_run_clicked(self):
