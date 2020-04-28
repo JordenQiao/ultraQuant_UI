@@ -6,9 +6,9 @@ INI_PATH_GLYCO = D:/Personal/GUI_2/Configuration/UltraQuant/glyco.ini
 INI_PATH_LINKER = D:/Personal/GUI_2/Configuration/UltraQuant/xlink.ini
 
 [Data]
-PATH_MS1 = D:/Personal/GUI_2/cfg.ini
+PATH_MS1 =
 TYPE_MS1 = 0
-PATH_MS2 = D:/Personal/GUI_2/cfg.ini
+PATH_MS2 =
 TYPE_MS2 = 0
 
 [Identification results]

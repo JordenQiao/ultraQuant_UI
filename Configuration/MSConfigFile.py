@@ -8,22 +8,22 @@ class CConfigFileOne():
         c = AutoConfigParser()
         # [Ini files]
         c.add_section('Ini files')
-        c.set('Ini files', 'INI_PATH_ELEMENT', str(config.INI_PATH_ELEMENT))
-        c.set('Ini files', 'INI_PATH_AA', str(config.INI_PATH_AA))
-        c.set('Ini files', 'INI_PATH_MOD', str(config.INI_PATH_MOD))
-        c.set('Ini files', 'INI_PATH_GLYCO', str(config.INI_PATH_GLYCO))
-        c.set('Ini files', 'INI_PATH_LINKER', str(config.INI_PATH_LINKER))
+        c.set('Ini files', 'INI_PATH_ELEMENT', str(config.INI_PATH_ELEMENT).replace("/", "\\"))
+        c.set('Ini files', 'INI_PATH_AA', str(config.INI_PATH_AA).replace("/", "\\"))
+        c.set('Ini files', 'INI_PATH_MOD', str(config.INI_PATH_MOD).replace("/", "\\"))
+        c.set('Ini files', 'INI_PATH_GLYCO', str(config.INI_PATH_GLYCO).replace("/", "\\"))
+        c.set('Ini files', 'INI_PATH_LINKER', str(config.INI_PATH_LINKER).replace("/", "\\"))
 
         # [Data]
         c.add_section('Data')
-        c.set('Data', 'PATH_MS1', '|'.join(config.PATH_MS1))
+        c.set('Data', 'PATH_MS1', '|'.join(config.PATH_MS1).replace("/", "\\"))
         c.set('Data', 'TYPE_MS1', str(config.TYPE_MS1))
-        c.set('Data', 'PATH_MS2', '|'.join(config.PATH_MS2))
+        c.set('Data', 'PATH_MS2', '|'.join(config.PATH_MS2).replace("/", "\\"))
         c.set('Data', 'TYPE_MS2', str(config.TYPE_MS2))
 
         # [Identification results]
         c.add_section('Identification results')
-        c.set('Identification results', 'PATH_IDENTIFICATION_RESULT', '|'.join(config.PATH_IDENTIFICATION_RESULT))
+        c.set('Identification results', 'PATH_IDENTIFICATION_RESULT', '|'.join(config.PATH_IDENTIFICATION_RESULT).replace("/", "\\"))
         c.set('Identification results', 'TYPE_IDENTIFICATION_RESULT', str(config.TYPE_IDENTIFICATION_RESULT))
         c.set('Identification results', 'THRESHOLD_FDR', str(config.THRESHOLD_FDR))
 
@@ -41,7 +41,7 @@ class CConfigFileOne():
 
         # [Export]
         c.add_section('Export')
-        c.set('Export', 'PATH_EXPORT', str(config.PATH_EXPORT))
+        c.set('Export', 'PATH_EXPORT', str(config.PATH_EXPORT).replace("/", "\\"))
         c.set('Export', 'TYPE_EXPORT', str(config.TYPE_EXPORT))
         c.set('Export', 'FLAG_CREATE_NEW_FOLDER', str(config.FLAG_CREATE_NEW_FOLDER))
         c.set('Export', 'FLAG_EXPORT_EVIDENCE', str(config.FLAG_EXPORT_EVIDENCE))
@@ -55,24 +55,24 @@ class CConfigFileOne():
         c.remove_note()
 
         # [Ini files]
-        config.INI_PATH_ELEMENT = c.get('Ini files', 'INI_PATH_ELEMENT')
-        config.INI_PATH_AA = c.get('Ini files', 'INI_PATH_AA')
-        config.INI_PATH_MOD = c.get('Ini files', 'INI_PATH_MOD')
-        config.INI_PATH_GLYCO = c.get('Ini files', 'INI_PATH_GLYCO')
-        config.INI_PATH_LINKER = c.get('Ini files', 'INI_PATH_LINKER')
+        config.INI_PATH_ELEMENT = c.get('Ini files', 'INI_PATH_ELEMENT').replace("\\", "/")
+        config.INI_PATH_AA = c.get('Ini files', 'INI_PATH_AA').replace("\\", "/")
+        config.INI_PATH_MOD = c.get('Ini files', 'INI_PATH_MOD').replace("\\", "/")
+        config.INI_PATH_GLYCO = c.get('Ini files', 'INI_PATH_GLYCO').replace("\\", "/")
+        config.INI_PATH_LINKER = c.get('Ini files', 'INI_PATH_LINKER').replace("\\", "/")
 
         # [Data]
-        config.PATH_MS1 = c.get('Data', 'PATH_MS1').split('|')
+        config.PATH_MS1 = c.get('Data', 'PATH_MS1').replace("\\", "/").split('|')
         if config.PATH_MS1 == ['']:
             config.PATH_MS1 = []
         config.TYPE_MS1 = c.get('Data', 'TYPE_MS1')
-        config.PATH_MS2 = c.get('Data', 'PATH_MS2').split('|')
+        config.PATH_MS2 = c.get('Data', 'PATH_MS2').replace("\\", "/").split('|')
         if config.PATH_MS2 == ['']:
             config.PATH_MS2 = []
         config.TYPE_MS2 = c.get('Data', 'TYPE_MS2')
 
         # [Identification results]
-        config.PATH_IDENTIFICATION_RESULT = c.get('Identification results', 'PATH_IDENTIFICATION_RESULT').split('|')
+        config.PATH_IDENTIFICATION_RESULT = c.get('Identification results', 'PATH_IDENTIFICATION_RESULT').replace("\\", "/").split('|')
         if config.PATH_IDENTIFICATION_RESULT == ['']:
             config.PATH_IDENTIFICATION_RESULT = []
         config.TYPE_IDENTIFICATION_RESULT = c.get('Identification results', 'TYPE_IDENTIFICATION_RESULT')
@@ -90,7 +90,7 @@ class CConfigFileOne():
         config.DDALL_FLAG_CALIBRATION_18O = c.get('Quantitation', 'DDALL_FLAG_CALIBRATION_18O')
 
         # [Export]
-        config.PATH_EXPORT = c.get('Export', 'PATH_EXPORT')
+        config.PATH_EXPORT = c.get('Export', 'PATH_EXPORT').replace("\\", "/")
         config.TYPE_EXPORT = c.get('Export', 'TYPE_EXPORT')
         config.FLAG_CREATE_NEW_FOLDER = c.get('Export', 'FLAG_CREATE_NEW_FOLDER')
         config.FLAG_EXPORT_EVIDENCE = c.get('Export', 'FLAG_EXPORT_EVIDENCE')
