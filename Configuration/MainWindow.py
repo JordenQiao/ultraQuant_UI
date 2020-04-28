@@ -158,7 +158,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     @pyqtSlot()
     def on_btn_run_clicked(self):
-        os.system(os.path.dirname(os.path.abspath(__file__)) + '\\UltraQuant\\UltraQuant.exe')
+        global import_file
+        if import_file == '':
+            QMessageBox.information(self, '消息', '你需要先导入文件或导出文件', QMessageBox.Yes)
+            return
+        print(os.path.dirname(os.path.abspath(__file__)) + '\\UltraQuant\\UltraQuant.exe ' + import_file)
+        os.system(os.path.dirname(os.path.abspath(__file__)) + '\\UltraQuant\\UltraQuant.exe ' + import_file)
 
     @pyqtSlot()
     def on_btn_save_clicked(self):
@@ -186,6 +191,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     @pyqtSlot()
     def on_btn_save_as_clicked(self):
+        global import_file
         if len(self.config_list) == 0:
             QMessageBox.warning(self, '消息', '无可供导出的配置文件，请先尝试导入', QMessageBox.Yes)
             return
@@ -200,6 +206,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 cconfig = config[1]()
                 cconfig_file = config[2]()
                 cconfig_ui = config[3]()
+                import_file = file_name
 
                 cconfig = cconfig_ui.ui2config(self, cconfig)
                 cconfig_file.config2file(file_name, cconfig)
