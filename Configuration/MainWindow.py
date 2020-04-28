@@ -217,6 +217,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def on_btn_import_clicked(self):
         global import_file
         file_name, file_type = QFileDialog.getOpenFileName(self, '配置文件选择', self.cwd, 'Text Files(*.txt)')
+        if file_name == '':
+            return
         for config in self.config_list:
             cconfig = config[1]()
             cconfig_file = config[2]()

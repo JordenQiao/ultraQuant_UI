@@ -46,8 +46,14 @@ class CConfigFileOne():
         c.set('Export', 'FLAG_CREATE_NEW_FOLDER', str(config.FLAG_CREATE_NEW_FOLDER))
         c.set('Export', 'FLAG_EXPORT_EVIDENCE', str(config.FLAG_EXPORT_EVIDENCE))
 
-        with open(path, 'w', encoding='utf-8') as f:
+        with open(path, 'w+', encoding='utf-8') as f:
             c.write(f)
+        with open(path, 'r') as f:
+            context = f.read()
+        f1 = open(path, 'w')
+        print(context)
+        f1.write(context.replace(" = ", "="))
+        f1.close()
 
     def file2config(self, path, config):
         c = AutoConfigParser()
