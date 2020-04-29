@@ -172,7 +172,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="iconSize">
        <size>
@@ -206,8 +206,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>928</width>
-             <height>1207</height>
+             <width>926</width>
+             <height>1377</height>
             </rect>
            </property>
            <property name="minimumSize">
@@ -258,9 +258,9 @@ font: 75 10pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Ini files</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>Resource/icons/icon_show.ico</normaloff>
-                <normalon>Resource/icons/icon_hide.ico</normalon>Resource/icons/icon_show.ico</iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
+                <normaloff>:/icons/icon_show.ico</normaloff>
+                <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -690,9 +690,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Data</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>Resource/icons/icon_show.ico</normaloff>
-                <normalon>Resource/icons/icon_hide.ico</normalon>Resource/icons/icon_show.ico</iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
+                <normaloff>:/icons/icon_show.ico</normaloff>
+                <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -1026,9 +1026,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Identification Result</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>Resource/icons/icon_show.ico</normaloff>
-                <normalon>Resource/icons/icon_hide.ico</normalon>Resource/icons/icon_show.ico</iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
+                <normaloff>:/icons/icon_show.ico</normaloff>
+                <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -1220,9 +1220,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Quantitation</string>
               </property>
               <property name="icon">
-               <iconset>
-                <normaloff>Resource/icons/icon_show.ico</normaloff>
-                <normalon>Resource/icons/icon_hide.ico</normalon>Resource/icons/icon_show.ico</iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
+                <normaloff>:/icons/icon_show.ico</normaloff>
+                <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -1668,7 +1668,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Export</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -1906,9 +1906,9 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
            <property name="geometry">
             <rect>
              <x>0</x>
-             <y>0</y>
-             <width>928</width>
-             <height>817</height>
+             <y>-288</y>
+             <width>926</width>
+             <height>863</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -1945,7 +1945,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Ini files</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -2157,7 +2157,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Data</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -2336,7 +2336,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Identification Result</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -2500,7 +2500,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Quantitation</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -2740,7 +2740,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
                <string>Export</string>
               </property>
               <property name="icon">
-               <iconset>
+               <iconset resource="../Resource/qrcs/icons.qrc">
                 <normaloff>:/icons/icon_show.ico</normaloff>
                 <normalon>:/icons/icon_hide.ico</normalon>:/icons/icon_show.ico</iconset>
               </property>
@@ -2888,13 +2888,13 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <x>0</x>
      <y>0</y>
      <width>997</width>
-     <height>23</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
  </widget>
  <resources>
-  <include location="../../AutoConfiguration/AutoConfigGUI/Resource/qrcs/icons.qrc"/>
+  <include location="../Resource/qrcs/icons.qrc"/>
  </resources>
  <connections>
   <connection>

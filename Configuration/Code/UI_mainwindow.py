@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'E:\资料\ultraquant_v6\ultraQuant_UI\Configuration\UI_mainwindow.ui'
+# Form implementation generated from reading ui file 'UI_mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.14.2
+# Created by: PyQt5 UI code generator 5.9.2
 #
 # WARNING! All changes made in this file will be lost!
 
-
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from Resource.qrcs import icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -114,7 +113,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 928, 1207))
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 926, 1377))
         self.scrollAreaWidgetContents.setMinimumSize(QtCore.QSize(0, 0))
         self.scrollAreaWidgetContents.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.scrollAreaWidgetContents.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -139,8 +138,8 @@ class Ui_MainWindow(object):
         self.btn_ini.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}\n"
 "font: 75 10pt \"MS Shell Dlg 2\";")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("E:\\资料\\ultraquant_v6\\ultraQuant_UI\\Configuration\\Resource/icons/icon_show.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon.addPixmap(QtGui.QPixmap("E:\\资料\\ultraquant_v6\\ultraQuant_UI\\Configuration\\Resource/icons/icon_hide.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(":/icons/icon_show.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/icons/icon_hide.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         self.btn_ini.setIcon(icon)
         self.btn_ini.setCheckable(True)
         self.btn_ini.setObjectName("btn_ini")
@@ -1007,10 +1006,7 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}\n"
 "font: 75 12pt \"MS Shell Dlg 2\";")
-        icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap(":/icons/icon_show.ico"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        icon1.addPixmap(QtGui.QPixmap(":/icons/icon_hide.ico"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        self.pushButton.setIcon(icon1)
+        self.pushButton.setIcon(icon)
         self.pushButton.setCheckable(True)
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout_8.addWidget(self.pushButton)
@@ -1142,7 +1138,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 928, 817))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, -288, 926, 863))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_4 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_4.setObjectName("verticalLayout_4")
@@ -1162,7 +1158,7 @@ class Ui_MainWindow(object):
         self.btn_summary_If.setFont(font)
         self.btn_summary_If.setToolTip("")
         self.btn_summary_If.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}")
-        self.btn_summary_If.setIcon(icon1)
+        self.btn_summary_If.setIcon(icon)
         self.btn_summary_If.setCheckable(True)
         self.btn_summary_If.setFlat(False)
         self.btn_summary_If.setObjectName("btn_summary_If")
@@ -1251,7 +1247,7 @@ class Ui_MainWindow(object):
         font.setKerning(True)
         self.btn__summary_D.setFont(font)
         self.btn__summary_D.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}")
-        self.btn__summary_D.setIcon(icon1)
+        self.btn__summary_D.setIcon(icon)
         self.btn__summary_D.setCheckable(True)
         self.btn__summary_D.setFlat(False)
         self.btn__summary_D.setObjectName("btn__summary_D")
@@ -1331,7 +1327,7 @@ class Ui_MainWindow(object):
         font.setKerning(True)
         self.btn_summary_IR.setFont(font)
         self.btn_summary_IR.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}")
-        self.btn_summary_IR.setIcon(icon1)
+        self.btn_summary_IR.setIcon(icon)
         self.btn_summary_IR.setCheckable(True)
         self.btn_summary_IR.setFlat(False)
         self.btn_summary_IR.setObjectName("btn_summary_IR")
@@ -1405,7 +1401,7 @@ class Ui_MainWindow(object):
         font.setKerning(True)
         self.btn_summary_Q.setFont(font)
         self.btn_summary_Q.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}")
-        self.btn_summary_Q.setIcon(icon1)
+        self.btn_summary_Q.setIcon(icon)
         self.btn_summary_Q.setCheckable(True)
         self.btn_summary_Q.setFlat(False)
         self.btn_summary_Q.setObjectName("btn_summary_Q")
@@ -1507,7 +1503,7 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.btn_summary_E.setFont(font)
         self.btn_summary_E.setStyleSheet("QPushButton{text-align:left; border:none;margin-bottom:2px;}")
-        self.btn_summary_E.setIcon(icon1)
+        self.btn_summary_E.setIcon(icon)
         self.btn_summary_E.setCheckable(True)
         self.btn_summary_E.setObjectName("btn_summary_E")
         self.verticalLayout_4.addWidget(self.btn_summary_E)
@@ -1574,12 +1570,12 @@ class Ui_MainWindow(object):
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 997, 23))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 997, 25))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
 
         self.retranslateUi(MainWindow)
-        self.tab_box.setCurrentIndex(1)
+        self.tab_box.setCurrentIndex(0)
         self.btn_qua.toggled['bool'].connect(self.frame_3.setHidden)
         self.btn_ini.toggled['bool'].connect(self.frame.setHidden)
         self.btn_dat.toggled['bool'].connect(self.frame_2.setHidden)
@@ -1821,3 +1817,4 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "FLAG_EXPORT_EVIDENCE"))
         self.tbl_E.setSortingEnabled(__sortingEnabled)
         self.tab_box.setTabText(self.tab_box.indexOf(self.tab_Summary), _translate("MainWindow", "Summary"))
+
