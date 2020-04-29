@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import sys
 
-from Configuration.MainWindow import MainWindow
+from Code.MainWindow import *
 
 if __name__=='__main__':
     app = QApplication(sys.argv)

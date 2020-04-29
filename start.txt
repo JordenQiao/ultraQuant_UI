@@ -1,18 +1,17 @@
 [Ini files]
-INI_PATH_ELEMENT=element.ini
-INI_PATH_AA=aa.ini
-INI_PATH_MOD=modification.ini
-INI_PATH_GLYCO=glyco.ini
-INI_PATH_LINKER=xlink.ini
+INI_PATH_ELEMENT=D:\Personal\GUI_2\Configuration\dist\element.ini
+INI_PATH_AA=D:\Personal\GUI_2\Configuration\dist\aa.ini
+INI_PATH_MOD=D:\Personal\GUI_2\Configuration\dist\modification.ini
+INI_PATH_GLYCO=D:\Personal\GUI_2\Configuration\dist\glyco.ini
 
 [Data]
-PATH_MS1=
+PATH_MS1=D:\Personal\GUI_2\Configuration\dist\aa.ini
 TYPE_MS1=0
-PATH_MS2=
+PATH_MS2=D:\Personal\GUI_2\Configuration\dist\aa.ini
 TYPE_MS2=0
 
 [Identification results]
-PATH_IDENTIFICATION_RESULT=
+PATH_IDENTIFICATION_RESULT=D:\Personal\GUI_2\Configuration\dist\aa.ini
 TYPE_IDENTIFICATION_RESULT=1
 THRESHOLD_FDR=0.010
 
@@ -28,7 +27,7 @@ DDALL_LABEL_INFO=2|NONE|AA:R:N:15N&AA:R:C:13C&AA:K:C:13C&AA:K:N:15N|
 DDALL_FLAG_CALIBRATION_18O=0
 
 [Export]
-PATH_EXPORT=D:\test\
+PATH_EXPORT=D:\\
 TYPE_EXPORT=1
 FLAG_CREATE_NEW_FOLDER=0
 FLAG_EXPORT_EVIDENCE=0

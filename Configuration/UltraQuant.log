@@ -1,0 +1,92 @@
+
+[UltraQuant] Copyright © 2020 Beihang University. All rights reserved.
+2020-04-29 16:31:31.637146
+2020-04-29 16:31:31,637 - MSLogging.py[line:98] - ERROR: MSFunction, MK449, INI_PATH_LINKER is all right?
+
+[UltraQuant] Copyright © 2020 Beihang University. All rights reserved.
+2020-04-29 16:31:32.833948
+2020-04-29 16:31:32,834 - MSLogging.py[line:98] - ERROR: MSFunction, MK449, INI_PATH_LINKER is all right?
+
+[UltraQuant] Copyright © 2020 Beihang University. All rights reserved.
+2020-04-29 16:31:33.833276
+2020-04-29 16:31:33,833 - MSLogging.py[line:98] - ERROR: MSFunction, MK449, INI_PATH_LINKER is all right?
+
+[UltraQuant] Copyright © 2020 Beihang University. All rights reserved.
+2020-04-29 16:42:36.445500
+
+[UltraQuant] Reading MS2 files (The first run will take a few minutes)...
+
+[UltraQuant] Reading identification files...
+
+[UltraQuant] Quantifying...
+
+[UltraQuant] Copyright © 2020 Beihang University. All rights reserved.
+2020-04-29 16:44:39.764873
+
+[UltraQuant] <Flow Label Free> Checking the environment...
+
+[UltraQuant] <Flow Label Free> Reading ini files...
+
+[UltraQuant] <Flow Label Free> Reading identification files...
+
+[UltraQuant] <Flow Label Free> Reading MS1 files (The first run will take a few minutes)...
+
+[UltraQuant] <Flow Label Free> Quantifying...
+
+[UltraQuant] <Function Quantitation> Getting evidences for references...
+0.000%
+0.092%
+0.183%
+0.274%
+0.366%
+0.457%
+0.548%
+0.640%
+0.731%
+0.822%
+0.913%
+1.005%
+1.096%
+1.187%
+1.279%
+1.370%
+1.461%
+1.553%
+1.644%
+1.735%
+1.827%
+1.918%
+2.009%
+2.100%
+2.192%
+2.283%
+2.374%
+2.466%
+2.557%
+2.648%
+2.740%
+2.831%
+2.922%
+3.013%
+3.105%
+3.196%
+3.287%
+3.379%
+3.470%
+3.561%
+3.653%
+3.744%
+3.835%
+3.927%
+4.018%
+4.109%
+4.200%
+4.292%
+4.383%
+4.474%
+4.566%
+4.657%
+4.748%
+4.840%
+4.931%
+5.022%
