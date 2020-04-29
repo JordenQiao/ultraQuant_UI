@@ -8,6 +8,7 @@ from PyQt5.QtGui import QColor
 from Code.UI_mainwindow import Ui_MainWindow
 
 import os
+import subprocess
 import configparser
 import tempfile
 
@@ -165,10 +166,30 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, '消息', '你需要先导入文件或导出文件', QMessageBox.Yes)
             return
         print(os.getcwd() + '\\UltraQuant.exe ' + import_file)
-        result = os.popen(os.getcwd() + '\\UltraQuant.exe ' + import_file)
-        lines = result.readlines()
-        for line in lines:
-            print(line)
+        os.system('D:\Personal\GUI_2\Configuration\Code\\UltraQuant' + '\\UltraQuant.exe ' + import_file)
+        # pi = subprocess.Popen(os.getcwd() + '\\UltraQuant.exe ' + import_file, close_fds=True, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
+        # # for info in pi.communicate():
+        # #     info = info.decode()
+        # #     print(info)
+        # print(pi.poll())
+        # for i in iter(pi.stdout.readline, ''):
+        #     if len(i) < 1:
+        #         break
+        #     print(i.decode('gbk').strip())
+
+        # while pi.poll() is None:
+        #     line = pi.stdout.readline()
+        #     line = line.decode()
+        #     line = line.replace('\t', '')
+        #     line = line.replace('b', '')
+        #     line = line.strip('\'')
+        #     if line:
+        #         print(line)
+        # if pi.returncode == 0:
+        #     print('Subprogram success')
+        # else:
+        #     print('Subprogram failed')
+
 
     @pyqtSlot()
     def on_btn_save_clicked(self):
