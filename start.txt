@@ -1,18 +1,19 @@
 [Ini files]
 INI_PATH_ELEMENT=D:\Personal\GUI_2\Configuration\dist\element.ini
-INI_PATH_AA=D:\Personal\GUI_2\Configuration\dist\aa.ini
+INI_PATH_AA=D:\Personal\GUI_2\cfg.ini
 INI_PATH_MOD=D:\Personal\GUI_2\Configuration\dist\modification.ini
 INI_PATH_GLYCO=D:\Personal\GUI_2\Configuration\dist\glyco.ini
+INI_PATH_LINKER=D:\Personal\GUI_2\cfg.ini
 
 [Data]
-PATH_MS1=D:\Personal\GUI_2\新建文件夹\DR2-1_1ug-120min_DDA_20191107130540.ms1|D:\Personal\GUI_2\新建文件夹\DR3-1_1ug-120min_DDA_20191107130540.ms1
+PATH_MS1=D:\Personal\GUI_2\README.md
 TYPE_MS1=0
-PATH_MS2=D:\Personal\GUI_2\新建文件夹\DR2-1_1ug-120min_DDA_20191107130540.ms2|D:\Personal\GUI_2\新建文件夹\DR3-1_1ug-120min_DDA_20191107130540.ms2
+PATH_MS2=D:\Personal\GUI_2\UltraQuant_cfg.txt
 TYPE_MS2=0
 
 [Identification results]
-PATH_IDENTIFICATION_RESULT=D:\Personal\GUI_2\新建文件夹\2-1\pFind.spectra|D:\Personal\GUI_2\新建文件夹\3-1\pFind.spectra
-TYPE_IDENTIFICATION_RESULT=0
+PATH_IDENTIFICATION_RESULT=D:\Personal\GUI_2\start.txt
+TYPE_IDENTIFICATION_RESULT=2
 THRESHOLD_FDR=0.010
 
 [Quantitation]
@@ -27,8 +28,8 @@ DDALL_LABEL_INFO=2|NONE|AA:R:N:15N&AA:R:C:13C&AA:K:C:13C&AA:K:N:15N|
 DDALL_FLAG_CALIBRATION_18O=0
 
 [Export]
-PATH_EXPORT=D:\\
+PATH_EXPORT=D:\Personal\GUI_2\Configuration\dist\
 TYPE_EXPORT=1
-FLAG_CREATE_NEW_FOLDER=1
+FLAG_CREATE_NEW_FOLDER=0
 FLAG_EXPORT_EVIDENCE=0
 

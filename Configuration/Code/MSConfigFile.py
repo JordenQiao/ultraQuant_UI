@@ -12,6 +12,7 @@ class CConfigFileOne():
         c.set('Ini files', 'INI_PATH_AA', str(config.INI_PATH_AA).replace("/", "\\"))
         c.set('Ini files', 'INI_PATH_MOD', str(config.INI_PATH_MOD).replace("/", "\\"))
         c.set('Ini files', 'INI_PATH_GLYCO', str(config.INI_PATH_GLYCO).replace("/", "\\"))
+        c.set('Ini files', 'INI_PATH_LINKER', str(config.INI_PATH_LINKER).replace("/", "\\"))
 
         # [Data]
         c.add_section('Data')
@@ -63,6 +64,7 @@ class CConfigFileOne():
         config.INI_PATH_AA = c.get('Ini files', 'INI_PATH_AA').replace("\\", "/")
         config.INI_PATH_MOD = c.get('Ini files', 'INI_PATH_MOD').replace("\\", "/")
         config.INI_PATH_GLYCO = c.get('Ini files', 'INI_PATH_GLYCO').replace("\\", "/")
+        config.INI_PATH_LINKER = c.get('Ini files', 'INI_PATH_LINKER').replace("\\", "/")
 
         # [Data]
         config.PATH_MS1 = c.get('Data', 'PATH_MS1').replace("\\", "/").split('|')
@@ -93,7 +95,7 @@ class CConfigFileOne():
         config.DDALL_FLAG_CALIBRATION_18O = c.get('Quantitation', 'DDALL_FLAG_CALIBRATION_18O')
 
         # [Export]
-        config.PATH_EXPORT = c.get('Export', 'PATH_EXPORT').replace("\\", "/")
+        config.PATH_EXPORT = c.get('Export', 'PATH_EXPORT').replace("\\", "/")[:-1]
         config.TYPE_EXPORT = c.get('Export', 'TYPE_EXPORT')
         config.FLAG_CREATE_NEW_FOLDER = c.get('Export', 'FLAG_CREATE_NEW_FOLDER')
         config.FLAG_EXPORT_EVIDENCE = c.get('Export', 'FLAG_EXPORT_EVIDENCE')

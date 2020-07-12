@@ -8,6 +8,7 @@ class CConfigUiOne:
         ui.ledt_ini_PE.setText(config.INI_PATH_ELEMENT)
         ui.ledt_ini_PM.setText(config.INI_PATH_MOD)
         ui.ledt_ini_PG.setText(config.INI_PATH_GLYCO)
+        ui.ledt_ini_PL.setText(config.INI_PATH_LINKER)
 
         # [Data]
         ui.list_dat_PM1.clear()
@@ -36,6 +37,7 @@ class CConfigUiOne:
 
         # [Export]
         ui.ledt_exp_PE.setText(config.PATH_EXPORT)
+        ui.ledt_exp_PE.setText(config.PATH_EXPORT)
         ui.cbox_exp_TE.setCurrentIndex(config.TYPE_EXPORT_LIST.index(config.TYPE_EXPORT))
         ui.cbox_exp_FCNF.setCurrentIndex(config.FLAG_CREATE_NEW_FOLDER_LIST.index(config.FLAG_CREATE_NEW_FOLDER))
         ui.cbox_exp_FEE.setCurrentIndex(config.FLAG_EXPORT_EVIDENCE_LIST.index(config.FLAG_EXPORT_EVIDENCE))
@@ -48,6 +50,7 @@ class CConfigUiOne:
         config.INI_PATH_ELEMENT = ui.ledt_ini_PE.text()
         config.INI_PATH_MOD = ui.ledt_ini_PM.text()
         config.INI_PATH_GLYCO = ui.ledt_ini_PG.text()
+        config.INI_PATH_LINKER = ui.ledt_ini_PL.text()
         # item_num = ui.list_ini_PE_2.count()
         # config.INI_PATH_ELEMENT = [ui.list_ini_PE_2.item(i).text() for i in range(item_num)]
         # item_num = ui.list_ini_PM_2.count()

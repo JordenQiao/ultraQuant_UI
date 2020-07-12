@@ -12,7 +12,6 @@ import subprocess
 import configparser
 import tempfile
 
-# import_file = ''
 
 class MainWindow(QMainWindow, Ui_MainWindow):
 
@@ -54,6 +53,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.ledt_ini_PE.setText(os.getcwd() + '\element.ini')
         self.ledt_ini_PG.setText(os.getcwd() + '\glyco.ini')
         self.ledt_ini_PM.setText(os.getcwd() + '\modification.ini')
+        self.ledt_ini_PL.setText(os.getcwd() + '\linker.ini')
+        self.ledt_exp_PE.setText(os.getcwd())
 
     def addItemsToTypeList(self):
         self.cbox_dat_TM1.addItems(['0', '1', '2'])
@@ -106,6 +107,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         num_error += self.checkPathExist(self.tbl_If, 2, item_ledt_ini_PM)
         item_ledt_ini_PG = self.ledt_ini_PG.text()
         num_error += self.checkPathExist(self.tbl_If, 3, item_ledt_ini_PG)
+        item_ledt_ini_PL = self.ledt_ini_PL.text()
+        num_error += self.checkPathExist(self.tbl_If, 4, item_ledt_ini_PL)
 
         #Data
         self.tbl_D.setItem(0, 1, QTableWidgetItem(self.cbox_dat_TM1.currentText()))
@@ -166,7 +169,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             QMessageBox.information(self, '消息', '你需要先导入文件或导出文件', QMessageBox.Yes)
             return
         print(os.getcwd() + '\\UltraQuant.exe ' + import_file)
-        os.system('D:\Personal\GUI_2\Configuration\Code\\UltraQuant' + '\\UltraQuant.exe ' + import_file)
+        os.system(os.getcwd() + '\\UltraQuant.exe ' + import_file)
         # pi = subprocess.Popen(os.getcwd() + '\\UltraQuant.exe ' + import_file, close_fds=True, shell=True, stderr=subprocess.PIPE, stdout=subprocess.PIPE)
         # # for info in pi.communicate():
         # #     info = info.decode()
@@ -225,9 +228,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if file_name == '':
             return
         else:
-            path_configs = os.path.join(os.path.dirname(file_name), 'params')
-            if not os.path.exists(path_configs):
-                os.makedirs(path_configs)
+            # path_configs = os.path.join(os.path.dirname(file_name), 'params')
+            # if not os.path.exists(path_configs):
+            #     os.makedirs(path_configs)
             for config in self.config_list:
                 cconfig = config[1]()
                 cconfig_file = config[2]()

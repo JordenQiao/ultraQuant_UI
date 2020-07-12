@@ -4,6 +4,7 @@ class CConfigOne(object):
     INI_PATH_AA = ''
     INI_PATH_MOD = ''
     INI_PATH_GLYCO = ''
+    INI_PATH_LINKER = ''
 
     # [Data]
     PATH_MS1 = []
